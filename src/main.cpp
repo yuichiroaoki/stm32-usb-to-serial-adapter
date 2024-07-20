@@ -1,11 +1,9 @@
 #include <Arduino.h>
 
-HardwareSerial Serial1(PA3, PA2);
-
 void setup() {
   // Initialize both serial ports
-  Serial.begin(115200);
-  Serial1.begin(115200);
+  Serial.begin(115200, SERIAL_8N1, 3, 1);
+  Serial1.begin(115200, SERIAL_8N1, 16, 17);
 }
 
 void loop() {
